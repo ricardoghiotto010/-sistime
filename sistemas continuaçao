@@ -1,0 +1,34 @@
+<html>
+    <style>
+        body{
+            background-color:black;
+            background-image:url("");
+            background-size:100%;
+            background-repeat:no-repeat;
+        }
+        div{
+            background-color:white;
+            width:80%;
+            height:80px;
+            color:black;
+            margin-left:10%;
+        }
+        #azul{
+            background-color:blue;
+        }
+        #branco{
+            background-color:white;
+        }
+        #vermelho{
+            background-color:blue;
+        }
+    </style>
+    <body>
+        <div>
+            <p>Meu primeiro site com div</p>
+        </div>
+        <div id="azul"></div>
+        <div id="branco"></div>
+        <div id="vermelho"></div>
+    </body>
+</html>
