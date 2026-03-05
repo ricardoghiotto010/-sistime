@@ -1,0 +1,53 @@
+<html>
+    <style>
+        body{
+            background-color:white;
+            background-image:url("");
+            background-size:100%;
+            background-repeat:no-repeat;
+        }
+        div{
+            background-color:;
+            width:100%;
+            height:;
+            color:black;
+            
+        }
+        #azul{
+            background-color:green;
+            width:50%
+            height:50%;
+        }
+        #branco{
+            background-color:white;
+            width:50%
+            height:50%;
+            background-image:url("https://s5.static.brasilescola.uol.com.br/be/2022/10/escudo-bandeira-mexico.jpg");
+            background-size:70%;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+        #vermelho{
+            background-color:red;
+            width:50%
+            height:50%;
+        }
+        section{
+            background-color:black;
+            width:500px;
+            height:300px;
+            display:flex;
+            
+        }
+    </style>
+    <body>
+        <div>
+            <p>Meu primeiro site com div</p>
+        </div>
+        <section>
+        <div id="azul"></div>
+        <div id="branco"></div>
+        <div id="vermelho"></div>
+        </section>
+    </body>
+</html>
