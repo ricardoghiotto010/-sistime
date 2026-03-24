@@ -1,0 +1,94 @@
+programa {
+  funcao inicio() {
+    cadeia nome , monstro 
+    inteiro vidajogador = 100 , vidamonstro = 100 ,   mochila[6] = { "bomba", "espada", "pistola","bomba","espada","pistola"} , opcao 
+    
+     escreva("RPG: MODO HARD\n")
+
+     escreva("Digite seu nome: ")
+     leia(nome)
+
+     escreva("digite qual o nome do monstro que voce enfrentara: ")
+     leia(monstro)
+    
+    enquanto (vidajogador > 0 e vidamonstro > 0)
+    {
+      escreva("\nVida do ", nome, ":", vidajogador,"\n")
+      escreva("Vida do ", monstro, ":", vidamonstro)
+
+      escreva("\n VAMOS COMEÇAR: ")
+      escreva("\n ataque o monstro com um dos itens: ")
+       escreva("\n1- ", mochila[0], "\n")
+       escreva("2- ", mochila[1], "\n")
+       escreva("3- ", mochila[2], "\n")
+       leia(opcao)
+
+       se (opcao == 1 )
+       {
+        escreva ("VOCE USOU A BOMBA: E DEU 40 DE DANO\n")
+        vidamonstro = vidamonstro - 40
+       }
+       
+       senao se (opcao  == 2 )
+       {
+       escreva("VOCE USOU A ESPADA: E DEU 25 DE DANO\n") 
+       vidamonstro = vidamonstro - 25
+       }
+       senao se (opcao == 3)
+        {
+       escreva("VOCE USOU A PISTOLA: E DEU 30 DE DANO!")
+       vidamonstro = vidamonstro - 30
+        }
+        senao 
+        {
+          pare
+        }
+        escreva("\nATAQUE DO MONSTRO")
+        escreva("\nele te machucou bastante e vc tem agora so 50 de vida!\n\n")
+        vidajogador = vidajogador - 50
+         
+        escreva("\nFIM DA PRIMEIRA RODADA, VAMOS VER AS VIDAS DOS JOGADORES:\n\n")
+        escreva("\nVida do ", nome, ":", vidajogador,"\n")
+      escreva("\nVida do ", monstro, ":", vidamonstro,"\n")
+
+        escreva("\n SEU ULTIMO ATAQUE, SE VC NAO MATAR O ", monstro, "VC PERDERA!")
+         
+       escreva("\n1- ", mochila[3], "\n")
+       escreva("2- ", mochila[4], "\n")
+       escreva("3- ", mochila[5], "\n")
+       leia(opcao)
+
+       se (opcao == 1 )
+       {
+        escreva ("VOCE USOU A BOMBA: E DEU 40 DE DANO\n")
+        vidamonstro = vidamonstro - 40
+       }
+       
+       senao se (opcao  == 2 )
+       {
+       escreva("VOCE USOU A ESPADA: E DEU 60 DE DANO\n")
+       vidamonstro = vidamonstro - 61
+       }
+       senao se (opcao == 3)
+        {
+       escreva("VOCE USOU A PISTOLA: E DEU 50 DE DANO!")
+       vidamonstro = vidamonstro - 50
+        }
+        senao 
+        {
+          pare
+        }
+         se (vidamonstro < 0)
+         {
+          escreva("VOCE GANHOU PARABENS!")
+          pare
+         }
+         senao
+         {
+          escreva("\n\nO ", monstro, "VAI ATACAR VC!\n")
+          escreva("O ", monstro, "TE ATACOU FATALMENTE E VOCE PERDEU!")
+          escreva("\nVOCE PERDEU!")
+         }
+    }
+  }
+}
