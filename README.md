@@ -7,4 +7,9 @@ while True :
         print("chame alguem com mais de 14 anos para conseguir adotar: ")
         break
     else :
-      input("escolha qual cachorro voce quer adotar: ")
+        print("RACAS DISPONIVEIS:")
+        for i, raca in enumerate(racas) :
+            print(f"{i+1} - {racas[i]}")
+        escolha = input("\nEscolha qual cachorro voce quer adotar: ")
+        print(f"Parabens,{nome}! Voce adotou um {escolha}")
+        break
