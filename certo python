@@ -1,0 +1,36 @@
+nome = input("Qual é o seu nome: ")
+idade = int(input("Qual sua idade: "))
+limpeza= 5.50
+racas = ["Pitbull", "Pincher", "Vira-lata", "Labrador", "Husky"]
+
+while True:
+    print(f"\nSISTEMA DE ADOÇÃO DO {nome.upper()}")
+    print("1 - Ver raças e Adotar")
+    print("2 - Sair")
+    
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        if idade < 14:
+            print("Você precisa de um responsável maior de 14 anos para adotar.")
+        else:
+            print("\nRAÇAS DISPONÍVEIS:")
+            for i, raca in enumerate(racas):
+                print(f"{i + 1} - {raca}")
+            
+            escolha = int(input("Digite o número do cachorro: ")) - 1
+            
+            if 0 <= escolha < len(racas):
+                animal_escolhido = racas[escolha]
+                print(f"Parabéns! Você adotou um {animal_escolhido}.")
+                print("Vamos cobrar uma taxa para a limpeza de seu " ,{animal_escolhido} , " : Preço = ", limpeza )
+                break
+            else:
+                print("Cachorro inválido.")
+
+    elif opcao == "2": 
+        print(f"Obrigado por usar o sistema, {nome}! Até logo.")
+        break
+    else:
+        print("Opção inválida, tente novamente.")
+        break
