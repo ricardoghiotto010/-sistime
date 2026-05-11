@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d, e, f;
+    
+    printf("Escreva tres numeros para somar: ");
+    scanf("%d%d%d", &a,&b,&c);
+    
+    d=a+b+c;
+    printf("resultado:%d ", d);
+    
+    printf("\nAgora escolha um numero para mutiplicar ao resultado:");
+    scanf("%d",&e);
+    
+    f=d*e;
+    
+    printf("\nRESULTADO:%d", f);
+    return 0;
+}
