@@ -18,3 +18,36 @@ int main()
     printf("\nRESULTADO:%d", f);
     return 0;
 }
+
+
+
+
+media
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d, e, f;
+    
+    printf("Escreva sua nota da 1 prova: ");
+    scanf("%d", &a);
+    
+    c=a/(100*40);
+    
+    printf("Escreva sua nota da 2 prova: ");
+    scanf("%d", &b);
+    
+    d=b/(100*60);
+    
+    e=(a+b)/2;
+    
+    printf("SUA MEDIA= %d", e);
+    
+    if (e>=60){
+        printf("\nVc passou");
+    }   else {
+    printf("\nVc reprovou");
+    }
+    return 0;
+}
