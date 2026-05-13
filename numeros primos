@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, i, j, Nprimo;
+    
+    printf("Me fale 2 numero q vou te falar quantos numeros primos tem entre eles:\n");
+    printf("numero 1:");
+    scanf("%d", &a);
+    
+    printf("numero 2:");
+    scanf("%d",&b);
+    
+    for(i=a;i<=b; i++){
+        Nprimo = 1;
+       
+        for(j=2; j<i;j++){
+            if(i%j==0){
+                Nprimo = 0;
+                break;
+            }
+        }if(Nprimo == 1){
+            printf ("%d ", i);
+            
+        } 
+    }
+    return 0;
+}
