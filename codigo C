@@ -1,0 +1,110 @@
+#include <stdio.h>
+
+int menu_pricipal()
+{
+    int escolha1;
+ printf("---------------------\n");
+ printf("!MENU DE DADO DO C!\n");
+ printf("---------------------\n");
+ printf("1- TIPOS PRIMITIVOS\n");
+ printf("2- ESTRUTURAS DE DADOS\n");
+ printf("---------------------\n");
+    scanf("%d",&escolha1);
+    return escolha1;
+}
+
+int menu_tipos_de_dados_primitivos()
+{
+    int escolha2;    
+    printf("TIPOS DE DADOS PRIMITIVOS\n");
+    printf("1-INT\n");
+    printf("2-CHAR\n");
+    printf("3-FLOAT\n");
+    printf("4-DOUBLE\n");
+    printf("5-VOID\n");
+    scanf("%d",&escolha2);
+    return escolha2;
+}
+
+    
+int menu_estruturas_de_dados(){
+    int escolha3;
+    printf("ESTRUTURASDE DADOS\n");
+    printf("1-ARRAY\n");
+    printf("2-LISTAS ENCADEADAS\n");
+    printf("3-PILHAS-LIFO\n");
+    printf("4-FILAS-FIFO\n");  
+    scanf("%d",&escolha3);
+    return escolha3;
+}
+
+int main()
+{
+    int escolha1;
+    int escolha2;
+    int escolha3;
+    escolha1 = menu_pricipal();
+    if(escolha1==1)
+    {
+        escolha2 = menu_tipos_de_dados_primitivos();
+        switch(escolha2)
+        {
+            case 1:
+            {
+                printf("INT:é o tipo de dado usado na programação para armazenar números inteiros. Isso significa que ele guarda qualquer número positivo, negativo ou zero, desde que não tenha casas decimais (sem ponto ou vírgula).\n");
+                printf("EXEMPLO:int idade = 28;int quantidadeItens = 5;int temperatura = -2;int totalDeItens = quantidadeItens + 10;\n ");
+                break;
+            }
+            case 2:
+            { 
+                printf("CHAR:É o tipo de dado usado na programação para armazenar um único caractere. Isso significa que ele guarda apenas uma letra, um número isolado, um espaço em branco ou um símbolo especial.\n");
+                printf("EXEMPLO:char letra = 'A';\n");
+                break;
+        }
+        case 3:
+        {
+            printf("FLOAT:float é o tipo de dado usado para armazenar números com casas decimais (números quebrados ou com ponto).\n");
+            printf("EXEMPLO:float preco = 19.99;printf("", preco);\n");
+            break;
+        }
+        case 4:
+        {
+            printf("DOUBLE:É o tipo de dado usado para armazenar números com casas decimais de alta precisão. Ele é o irmão maior do float.\n");
+            printf("EXEMPLO:double pi = 3.1415926535;System.out.println(pi); \n");
+            break;
+        }
+        case 5:
+        {
+            printf("VOID:é uma palavra-chave usada na programação para indicar que algo não tem tipo ou não retorna nenhum valor.");
+            printf("EXEMPLO:void exibirMensagem() {System.out.println("");}");
+        }
+    }}
+    else{
+        escolha3 = menu_estruturas_de_dados();
+        switch(escolha3)
+        {
+          case 1:
+            {
+                printf("ARRAY:É uma estrutura de dados que permite armazenar múltiplos valores em uma única variável de forma organizada e sequencial.\n");
+                printf("EXEMPLO:let frutas = [maça, banana, morango];");
+                break;
+            }
+            case 2:
+            { 
+                printf("LISTAS ENCADEADAS:É uma estrutura de dados onde os elementos não ficam guardados juntos na memória do computador.\n");
+                break;
+        }
+        case 3:
+        {
+            printf("PILHAS-LIFO:é uma estrutura de dados linear que segue a regra do LIFO (Last In, First Out). Isso significa que o último elemento a entrar é o primeiro a sair.\n");
+            break;
+        }
+        case 4:
+        {
+            printf("FILAS-FIFO:Uma fila (ou queue, em inglês) é uma estrutura de dados linear que segue a regra do FIFO (First In, First Out).\n");
+            break;
+        }  
+        }
+    }
+    return 0;
+}
